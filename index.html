@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun Ani Nuraeni ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Letter Gate (Open this first) -->
+    <div id="letterGate" class="letter-gate" aria-modal="true" role="dialog">
+        <div class="letter-wrap">
+            <!-- Envelope (shown first) -->
+            <div class="envelope-container">
+                <div class="envelope">
+                    <div class="env-back"></div>
+                    <div class="env-flap"></div>
+                    <div class="env-front"></div>
+                    <div class="env-seal">❤</div>
+                </div>
+                <button id="openLetterBtn" class="open-letter-btn">
+                    <span class="btn-icon">💌</span>
+                    <span class="btn-text">Buka Surat</span>
+                    <span class="btn-sparkle">✨</span>
+                </button>
+            </div>
+
+            <!-- Letter Paper (hidden, shown after opening) -->
+            <div class="letter-paper">
+                <p class="letter-kicker">Untuk kamu yang paling aku sayangg…</p>
+                <h1 class="letter-title">Ani Nuraeni</h1>
+                <p class="letter-body">
+                    Aku bikin ini spesial buat kamu. Buka suratnya ya, terus lanjut sampai habis.
+                </p>
+                <p class="letter-from">From your Boyfriend<br><strong>Muhamad Aryadilah</strong></p>
+                <p class="letter-hint">setelah kamuu masuk, boleh play lagu biar makin kerasa yaa sayangg</p>
+                
+                <button id="enterWebsiteBtn" class="enter-website-btn">
+                    <span class="btn-icon">🚀</span>
+                    <span class="btn-text">Silahkan Klik sayangg</span>
+                    <span class="btn-sparkle">✨</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Romantic Background Particles -->
+    <div class="romantic-particles"></div>
+    
+    <div class="container" id="mainContent" aria-hidden="true">
+        <!-- Animated Background -->
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Header -->
+            <header class="header">
+                <h1 class="title animate-fade-in">🎉 ciee yang lagi ulang tahun 🎉</h1>
+                <h2 class="subtitle animate-fade-in-delay"></h2>
+            </header>
+
+            <!-- Heart Animation -->
+            <div class="heart-container">
+                <div class="heart"></div>
+            </div>
+
+            <!-- Music Player -->
+            <div class="music-player animate-fade-in-delay-2">
+                <h3>Play dulu yaa sayangg sebelum lanjut</h3>
+                <div class="player-controls">
+                    <button id="playBtn" class="play-btn">
+                        <span id="playIcon">▶</span>
+                    </button>
+                    <div class="track-info">
+                        <p id="trackName"></p>
+                        <div class="progress-bar">
+                            <div id="progress" class="progress"></div>
+                        </div>
+                    </div>
+                </div>
+                <audio id="audioPlayer" loop>
+                    <!-- GANTI URL LAGU DI SINI -->
+                    <!-- Opsi 1: Gunakan file lokal (contoh: music/lagu-romantis.mp3) -->
+                    <!-- Opsi 2: Gunakan URL dari internet (pastikan bisa diakses publik) -->
+                    <source src="lagu.mp3" type="audio/mpeg">
+                    Browser Anda tidak mendukung audio.
+                </audio>
+            </div>
+
+            <!-- Message Section -->
+            <div class="message-section animate-fade-in-delay-3">
+                <p class="message">
+                    Di hari spesialmu ini, aku ingin mengucapkan...
+                </p>
+                <p class="message-large">
+                    HAPPY BIRTHDAY MY LOVEEE! 🎂
+                </p>
+                <p class="message">
+                    di hari istimewa ini, kamuU selalu bahagia, sehat selaluu, panjang umur dan rezekinya lancarr. 
+                    Terima kasih sudah menjadi bagian terindah dalam hidupku. 
+                    I Love Youuu babyy! ❤️
+                </p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons animate-fade-in-delay-4">
+                <button id="galleryBtn" class="gallery-btn fancy-btn">
+                    <span class="btn-icon">💖</span>
+                    <span class="btn-text">It's You</span>
+                    <span class="btn-sparkle">✨</span>
+                </button>
+
+                <button id="surpriseBtn" class="surprise-btn fancy-btn animate-fade-in-delay-5">
+                    <span class="btn-icon">🎁</span>
+                    <span class="btn-text">Klik untuk Surprise!</span>
+                    <span class="btn-sparkle">✨</span>
+                </button>
+            </div>
+
+            <!-- It's You Modal -->
+            <div id="galleryModal" class="modal its-you-modal">
+                <div class="modal-content its-you-content">
+                    <span class="close">&times;</span>
+                    
+                    <!-- Header dengan animasi -->
+                    <div class="its-you-header">
+                        <div class="floating-hearts-header">
+                            <span class="heart-float">💕</span>
+                            <span class="heart-float">💖</span>
+                            <span class="heart-float">💗</span>
+                        </div>
+                        <h2 class="its-you-title">
+                            <span class="title-word">It's</span>
+                            <span class="title-word">You</span>
+                        </h2>
+                        <p class="its-you-subtitle">Yang membuat hari-hariku berarti ❤️</p>
+                    </div>
+
+                    <!-- Carousel Section -->
+                    <div class="gallery-carousel">
+                        <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Foto Sebelumnya">
+                            <span>‹</span>
+                        </button>
+                        <div class="carousel-container" id="galleryGrid">
+                            <!-- Photos will be added here -->
+                        </div>
+                        <button class="carousel-btn next-btn" id="nextBtn" aria-label="Foto Selanjutnya">
+                            <span>›</span>
+                        </button>
+                        <div class="carousel-indicators" id="carouselIndicators">
+                            <!-- Indicators will be added here -->
+                        </div>
+                        <div class="photo-counter" id="photoCounter">
+                            <span id="currentPhoto">1</span> / <span id="totalPhotos">5</span>
+                        </div>
+                    </div>
+
+                    <!-- Footer Message -->
+                    <div class="its-you-footer">
+                        <p class="its-you-message">Setiap momen bersamamu adalah kenangan terindah 💝</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Surprise Modal -->
+            <div id="surpriseModal" class="surprise-modal">
+                <div class="surprise-content">
+                    <div class="surprise-animation">
+                        <div class="surprise-heart">💖</div>
+                        <div class="surprise-heart">💕</div>
+                        <div class="surprise-heart">💗</div>
+                        <div class="surprise-heart">💝</div>
+                        <div class="surprise-heart">💓</div>
+                    </div>
+                    <h2 class="surprise-title">🎉 SURPRISE! 🎉</h2>
+                    <div class="surprise-message">
+                        <p class="surprise-text-large">Aku punya sesuatu untukmu sayang! ❤️</p>
+                        <p class="surprise-text-normal">
+                            Terima kasih sudah menjadi bagian terindah dalam hidupku. 
+                            Setiap hari bersamamu adalah hadiah terbesar bagiku.
+                        </p>
+                        <p class="surprise-text-normal">
+                            Semoga di hari ulang tahunmu ini, semua impianmu menjadi kenyataan 
+                            dan kebahagiaan selalu menyertaimu! 🌟
+                        </p>
+                        <p class="surprise-text-large">Aku sayang kamu! 💕</p>
+                    </div>
+                    
+                    <!-- Surprise Photos -->
+                    <div class="surprise-photos">
+                        <div class="surprise-photo-item">
+                            <img src="ft6.jpeg" alt="Kenangan Indah" loading="lazy">
+                        </div>
+                        <div class="surprise-photo-item">
+                            <img src="ft7.jpeg" alt="Kenangan Indah" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <button id="closeSurpriseBtn" class="close-surprise-btn">Tutup</button>
+                </div>
+            </div>
+
+            <!-- Floating Hearts -->
+            <div class="floating-hearts">
+                <span class="floating-heart">❤️</span>
+                <span class="floating-heart">💕</span>
+                <span class="floating-heart">💖</span>
+                <span class="floating-heart">💗</span>
+                <span class="floating-heart">💝</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
